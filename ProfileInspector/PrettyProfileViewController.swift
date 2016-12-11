@@ -43,6 +43,9 @@ class PrettyProfileViewController: NSViewController {
                             if let value = document.value(forKey: field) {
                                 v.stringValue = (value as AnyObject).description
                             }
+                            else {
+                                v.stringValue = ""
+                            }
                         }
                     }
                 })
