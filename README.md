@@ -6,3 +6,5 @@ Profile inspector opens provisioning profiles from developer.apple.com and shows
 * Entitlements
 * Allowed devices
 * Other useful information
+
+[Downloads here](https://github.com/zgchurch/ProfileInspector/releases)
