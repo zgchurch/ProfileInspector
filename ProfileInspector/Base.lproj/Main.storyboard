@@ -691,8 +691,8 @@
             <objects>
                 <tabViewController selectedTabViewItemIndex="0" tabStyle="toolbar" id="tGM-zb-lyb" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem identifier="" image="NSSmartBadgeTemplate" id="qkV-JE-gHd"/>
-                        <tabViewItem identifier="" id="T9s-aq-kqQ"/>
+                        <tabViewItem identifier="" image="NSInfo" id="qkV-JE-gHd"/>
+                        <tabViewItem identifier="" image="NSRevealFreestandingTemplate" id="T9s-aq-kqQ"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="NHx-CE-nxt">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -920,7 +920,8 @@
                                             <connections>
                                                 <action trigger="doubleAction" selector="showSigningIdentityCertificateSheetWithSender:" target="Kg2-H7-32g" id="hq8-Iq-t39"/>
                                                 <binding destination="g9m-FS-6br" name="content" keyPath="arrangedObjects" id="sVJ-Qk-P8O"/>
-                                                <binding destination="g9m-FS-6br" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="sVJ-Qk-P8O" id="5Vc-Bh-cHJ">
+                                                <binding destination="g9m-FS-6br" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="sVJ-Qk-P8O" id="qFp-zE-5G5"/>
+                                                <binding destination="g9m-FS-6br" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="qFp-zE-5G5" id="RwA-m0-hWb">
                                                     <dictionary key="options">
                                                         <bool key="NSAlwaysPresentsApplicationModalAlerts" value="YES"/>
                                                     </dictionary>
@@ -945,10 +946,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0V-Ub-JFm">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0V-Ub-JFm">
                                 <rect key="frame" x="20" y="158" width="453" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <clipView key="contentView" ambiguous="YES" id="bio-AF-A6Z">
+                                <clipView key="contentView" id="bio-AF-A6Z">
                                     <rect key="frame" x="0.0" y="0.0" width="453" height="176"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1056,10 +1056,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgL-3U-kJ9">
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgL-3U-kJ9">
                                 <rect key="frame" x="481" y="158" width="300" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <clipView key="contentView" ambiguous="YES" id="Zd2-Au-NZc">
+                                <clipView key="contentView" id="Zd2-Au-NZc">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="176"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1297,11 +1296,13 @@
                             <constraint firstItem="Ik9-9Y-cea" firstAttribute="height" secondItem="YlK-Mk-UbC" secondAttribute="height" id="76s-Dk-LQQ"/>
                             <constraint firstItem="R2c-7m-dlw" firstAttribute="top" secondItem="4Vu-Yt-ahc" secondAttribute="bottom" constant="8" id="AyO-1X-4U5"/>
                             <constraint firstItem="0yA-D9-B9G" firstAttribute="centerX" secondItem="DTe-Pc-RkU" secondAttribute="centerX" id="BKQ-GM-PCm"/>
+                            <constraint firstItem="zgL-3U-kJ9" firstAttribute="width" secondItem="4yf-hX-Pfw" secondAttribute="width" id="BQ5-6M-jUI"/>
                             <constraint firstItem="rXY-2e-4ue" firstAttribute="height" secondItem="cik-Wi-zjG" secondAttribute="height" id="Bqr-43-VP8"/>
                             <constraint firstItem="LJ3-oI-brX" firstAttribute="width" secondItem="R2c-7m-dlw" secondAttribute="width" id="ETw-ea-ElK"/>
                             <constraint firstItem="LJ3-oI-brX" firstAttribute="top" secondItem="R2c-7m-dlw" secondAttribute="bottom" constant="8" id="EUU-wa-yGb"/>
                             <constraint firstItem="4Vu-Yt-ahc" firstAttribute="height" secondItem="R2c-7m-dlw" secondAttribute="height" id="Fhc-Ra-rcr"/>
                             <constraint firstItem="rXY-2e-4ue" firstAttribute="centerX" secondItem="cik-Wi-zjG" secondAttribute="centerX" id="GsM-lJ-SmB"/>
+                            <constraint firstItem="O0V-Ub-JFm" firstAttribute="leading" secondItem="j3g-Dh-e3z" secondAttribute="leading" constant="20" id="Hpy-m4-Qiv"/>
                             <constraint firstItem="rXY-2e-4ue" firstAttribute="width" secondItem="cik-Wi-zjG" secondAttribute="width" id="IcA-GK-4rf"/>
                             <constraint firstItem="0yA-D9-B9G" firstAttribute="width" secondItem="DTe-Pc-RkU" secondAttribute="width" id="Itf-75-hJ9"/>
                             <constraint firstItem="Lfh-pK-5kM" firstAttribute="width" secondItem="nnr-Vo-NKi" secondAttribute="width" id="JOV-UG-pKh"/>
@@ -1317,7 +1318,9 @@
                             <constraint firstItem="Ik9-9Y-cea" firstAttribute="centerX" secondItem="YlK-Mk-UbC" secondAttribute="centerX" id="Ozl-vJ-Hw0"/>
                             <constraint firstItem="cik-Wi-zjG" firstAttribute="top" secondItem="Ik9-9Y-cea" secondAttribute="bottom" constant="8" id="P4Y-Sa-t7R"/>
                             <constraint firstItem="cik-Wi-zjG" firstAttribute="centerX" secondItem="Ik9-9Y-cea" secondAttribute="centerX" id="PTp-ZP-1s8"/>
+                            <constraint firstItem="zgL-3U-kJ9" firstAttribute="top" secondItem="4yf-hX-Pfw" secondAttribute="bottom" constant="8" id="QIl-PI-iGa"/>
                             <constraint firstItem="cG6-tb-ITr" firstAttribute="leading" secondItem="j3g-Dh-e3z" secondAttribute="leading" constant="20" id="QiW-qh-jxU"/>
+                            <constraint firstItem="zgL-3U-kJ9" firstAttribute="leading" secondItem="O0V-Ub-JFm" secondAttribute="trailing" constant="8" id="Qm7-in-X9g"/>
                             <constraint firstItem="nnr-Vo-NKi" firstAttribute="centerY" secondItem="cik-Wi-zjG" secondAttribute="centerY" id="R1W-X9-cCJ"/>
                             <constraint firstItem="znQ-Ms-vZj" firstAttribute="width" secondItem="gA8-JL-RHz" secondAttribute="width" id="RRl-vQ-AmT"/>
                             <constraint firstItem="LJ3-oI-brX" firstAttribute="centerY" secondItem="Ik9-9Y-cea" secondAttribute="centerY" id="TsK-El-fUp"/>
@@ -1328,6 +1331,7 @@
                             <constraint firstItem="DTe-Pc-RkU" firstAttribute="height" secondItem="rXY-2e-4ue" secondAttribute="height" id="VcH-9k-eek"/>
                             <constraint firstItem="LJ3-oI-brX" firstAttribute="leading" secondItem="Ik9-9Y-cea" secondAttribute="trailing" constant="10" id="WSe-uX-B3R"/>
                             <constraint firstItem="AoM-Wo-659" firstAttribute="width" secondItem="cG6-tb-ITr" secondAttribute="width" id="WuT-iV-ygQ"/>
+                            <constraint firstItem="O0V-Ub-JFm" firstAttribute="height" secondItem="zgL-3U-kJ9" secondAttribute="height" id="YnL-vG-HZ2"/>
                             <constraint firstItem="nnr-Vo-NKi" firstAttribute="height" secondItem="LJ3-oI-brX" secondAttribute="height" id="Z7p-Z9-QL0"/>
                             <constraint firstItem="gA8-JL-RHz" firstAttribute="centerY" secondItem="DTe-Pc-RkU" secondAttribute="centerY" id="aLO-MO-rP2"/>
                             <constraint firstItem="ybU-qO-d4F" firstAttribute="width" secondItem="4Vu-Yt-ahc" secondAttribute="width" id="ah8-k8-1hF"/>
@@ -1343,10 +1347,13 @@
                             <constraint firstItem="AoM-Wo-659" firstAttribute="centerX" secondItem="cG6-tb-ITr" secondAttribute="centerX" id="guV-38-Kq9"/>
                             <constraint firstItem="rXY-2e-4ue" firstAttribute="top" secondItem="cik-Wi-zjG" secondAttribute="bottom" constant="8" id="hOR-mN-HZd"/>
                             <constraint firstItem="AoM-Wo-659" firstAttribute="top" secondItem="cG6-tb-ITr" secondAttribute="bottom" constant="8" id="hhk-cB-oyU"/>
+                            <constraint firstAttribute="trailing" secondItem="zgL-3U-kJ9" secondAttribute="trailing" constant="20" id="iNg-JX-XPQ"/>
                             <constraint firstItem="xxK-NR-nvN" firstAttribute="leading" secondItem="j3g-Dh-e3z" secondAttribute="leading" constant="20" id="ihQ-5N-VDk"/>
                             <constraint firstAttribute="bottom" secondItem="xxK-NR-nvN" secondAttribute="bottom" constant="20" id="jSz-1a-T5b"/>
                             <constraint firstItem="gA8-JL-RHz" firstAttribute="top" secondItem="Lfh-pK-5kM" secondAttribute="bottom" constant="8" id="kas-I4-5Hy"/>
+                            <constraint firstItem="xxK-NR-nvN" firstAttribute="top" secondItem="O0V-Ub-JFm" secondAttribute="bottom" constant="8" id="lt5-g9-1tS"/>
                             <constraint firstItem="LJ3-oI-brX" firstAttribute="height" secondItem="R2c-7m-dlw" secondAttribute="height" id="m7K-e7-90F"/>
+                            <constraint firstItem="xxK-NR-nvN" firstAttribute="top" secondItem="zgL-3U-kJ9" secondAttribute="bottom" constant="8" id="mTf-mb-U6o"/>
                             <constraint firstItem="gA8-JL-RHz" firstAttribute="width" secondItem="Lfh-pK-5kM" secondAttribute="width" id="mXF-W6-17l"/>
                             <constraint firstItem="gA8-JL-RHz" firstAttribute="leading" secondItem="DTe-Pc-RkU" secondAttribute="trailing" constant="10" id="mY7-yK-7M2"/>
                             <constraint firstItem="0yA-D9-B9G" firstAttribute="top" secondItem="DTe-Pc-RkU" secondAttribute="bottom" constant="8" id="nHU-M1-3RT"/>
@@ -1436,6 +1443,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSSmartBadgeTemplate" width="14" height="14"/>
+        <image name="NSInfo" width="32" height="32"/>
+        <image name="NSRevealFreestandingTemplate" width="14" height="14"/>
     </resources>
 </document>
