@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -691,8 +691,8 @@
             <objects>
                 <tabViewController selectedTabViewItemIndex="0" tabStyle="toolbar" id="tGM-zb-lyb" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem identifier="" image="NSInfo" id="qkV-JE-gHd"/>
-                        <tabViewItem identifier="" image="NSRevealFreestandingTemplate" id="T9s-aq-kqQ"/>
+                        <tabViewItem label="Overview" identifier="" image="NSInfo" id="qkV-JE-gHd"/>
+                        <tabViewItem identifier="" image="plist" id="T9s-aq-kqQ"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="NHx-CE-nxt">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -709,10 +709,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="833"/>
         </scene>
-        <!--Pretty Profile-->
+        <!--Overview-->
         <scene sceneID="AWC-IN-lSK">
             <objects>
-                <viewController title="Pretty Profile" id="Kg2-H7-32g" customClass="PrettyProfileViewController" customModule="ProfileInspector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Overview" id="Kg2-H7-32g" customClass="PrettyProfileViewController" customModule="ProfileInspector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" identifier="signing" id="j3g-Dh-e3z">
                         <rect key="frame" x="0.0" y="0.0" width="801" height="598"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -787,7 +787,7 @@
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <tableHeaderView key="headerView" id="wHd-63-hYJ">
+                                <tableHeaderView key="headerView" toolTip="123" id="wHd-63-hYJ">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
@@ -1132,7 +1132,7 @@
                                     <constraint firstAttribute="width" constant="140" id="hgR-Ol-hOr"/>
                                     <constraint firstAttribute="height" constant="17" id="kP6-1N-Jdq"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Profile name" id="3TM-B5-GXn">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Profile Name" id="3TM-B5-GXn">
                                     <font key="font" metaFont="systemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1380,6 +1380,7 @@
                         <outlet property="entitlementsArrayController" destination="itt-6P-isk" id="D4j-by-R5V"/>
                         <outlet property="platformsArrayController" destination="t8i-9u-4bN" id="WXt-gI-T52"/>
                         <outlet property="provisionedDevicesArrayController" destination="Nd0-Vf-5df" id="Ilg-iM-lpz"/>
+                        <outlet property="provisionedDevicesTableColumn" destination="4bc-pl-jOP" id="S5x-9a-dw3"/>
                         <outlet property="signerSubject" destination="znQ-Ms-vZj" id="SGY-eg-sAc"/>
                     </connections>
                 </viewController>
@@ -1444,6 +1445,6 @@
     </scenes>
     <resources>
         <image name="NSInfo" width="32" height="32"/>
-        <image name="NSRevealFreestandingTemplate" width="14" height="14"/>
+        <image name="plist" width="32" height="32"/>
     </resources>
 </document>

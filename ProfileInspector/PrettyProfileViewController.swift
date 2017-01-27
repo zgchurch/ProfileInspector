@@ -15,6 +15,7 @@ class PrettyProfileViewController: NSViewController {
     @IBOutlet var entitlementsArrayController: NSArrayController!
     @IBOutlet var platformsArrayController: NSArrayController!
     @IBOutlet var signerSubject: NSButton!
+    @IBOutlet weak var provisionedDevicesTableColumn: NSTableColumn!
 
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -25,6 +26,17 @@ class PrettyProfileViewController: NSViewController {
             entitlementsArrayController.content = document.entitlements
             platformsArrayController.content = document.platforms
             signerSubject.title = document.signerSubject!
+            
+            if let deviceCount = document.devices?.count {
+                switch deviceCount {
+                    case 0:
+                        break
+                    case 1:
+                        provisionedDevicesTableColumn.title = "Provisioned Devices - 1 device"
+                    default:
+                        provisionedDevicesTableColumn.title = "Provisioned Devices - \(deviceCount) devices"
+                }
+            }
             
             let fields = [
                 "name",
@@ -41,7 +53,11 @@ class PrettyProfileViewController: NSViewController {
                     if v.identifier == field {
                         if let v = v as? NSControl {
                             if let value = document.value(forKey: field) {
-                                v.stringValue = (value as AnyObject).description
+                                if value is Date {
+                                  v.stringValue = formatDate(from: value as! Date)
+                                }else{
+                                  v.stringValue = (value as AnyObject).description
+                                }
                             }
                             else {
                                 v.stringValue = ""
@@ -51,6 +67,15 @@ class PrettyProfileViewController: NSViewController {
                 })
             }
         }
+    }
+    
+    func formatDate(from date: Date)->String{
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        formatter.timeStyle = .medium
+        
+        let dateString = formatter.string(from: date)
+        return dateString
     }
     
     func showCertificateSheet(certificates: Array<SecCertificate>) {
